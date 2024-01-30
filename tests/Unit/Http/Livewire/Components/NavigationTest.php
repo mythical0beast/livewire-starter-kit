@@ -15,8 +15,6 @@ class NavigationTest extends TestCase
 
     /**
      * Test the component mounts correctly.
-     *
-     * @return void
      */
     public function test_component_can_mount(): void
     {
@@ -26,8 +24,6 @@ class NavigationTest extends TestCase
 
     /**
      * Test we can see our collections.
-     *
-     * @return void
      */
     public function test_collections_are_visible(): void
     {

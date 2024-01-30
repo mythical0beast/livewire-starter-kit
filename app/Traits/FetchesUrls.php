@@ -13,11 +13,6 @@ trait FetchesUrls
 
     /**
      * Fetch a url model.
-     *
-     * @param  string  $slug
-     * @param  string  $type
-     * @param  array  $eagerLoad
-     * @return \Lunar\Models\Url|null
      */
     public function fetchUrl(string $slug, string $type, array $eagerLoad = []): ?Url
     {

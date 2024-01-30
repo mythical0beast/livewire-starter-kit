@@ -40,8 +40,6 @@ class Cart extends Component
 
     /**
      * Get the current cart instance.
-     *
-     * @return \Lunar\Managers\CartManager
      */
     public function getCartProperty(): CartManager
     {
@@ -50,8 +48,6 @@ class Cart extends Component
 
     /**
      * Return the cart lines from the cart.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function getCartLinesProperty(): Collection
     {
@@ -60,8 +56,6 @@ class Cart extends Component
 
     /**
      * Update the cart lines.
-     *
-     * @return void
      */
     public function updateLines(): void
     {
@@ -85,8 +79,6 @@ class Cart extends Component
      *
      * We want to map out our cart lines like this so we can
      * add some validation rules and make them editable.
-     *
-     * @return void
      */
     public function mapLines(): void
     {

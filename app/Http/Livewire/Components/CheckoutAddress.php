@@ -80,8 +80,6 @@ class CheckoutAddress extends Component
 
     /**
      * Save the cart address.
-     *
-     * @return void
      */
     public function save(): void
     {

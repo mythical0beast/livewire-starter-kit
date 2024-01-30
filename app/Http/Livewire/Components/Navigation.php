@@ -23,8 +23,6 @@ class Navigation extends Component
 
     /**
      * Return the collections in a tree.
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function getCollectionsProperty(): \Illuminate\Database\Eloquent\Collection
     {

@@ -99,8 +99,6 @@ class CheckoutPage extends Component
 
     /**
      * {@inheritDoc}
-     *
-     * @return void
      */
     public function mount(): void
     {
@@ -141,8 +139,6 @@ class CheckoutPage extends Component
 
     /**
      * Trigger an event to refresh addresses.
-     *
-     * @return void
      */
     public function triggerAddressRefresh(): void
     {
@@ -151,8 +147,6 @@ class CheckoutPage extends Component
 
     /**
      * Determines what checkout step we should be at.
-     *
-     * @return void
      */
     public function determineCheckoutStep(): void
     {
@@ -183,8 +177,6 @@ class CheckoutPage extends Component
 
     /**
      * Refresh the cart instance.
-     *
-     * @return void
      */
     public function refreshCart(): void
     {
@@ -193,8 +185,6 @@ class CheckoutPage extends Component
 
     /**
      * Return the shipping option.
-     *
-     * @return void
      */
     public function getShippingOptionProperty(): void
     {
@@ -215,9 +205,6 @@ class CheckoutPage extends Component
 
     /**
      * Save the address for a given type.
-     *
-     * @param  string  $type
-     * @return void
      */
     public function saveAddress(string $type): void
     {
@@ -257,8 +244,6 @@ class CheckoutPage extends Component
 
     /**
      * Save the selected shipping option.
-     *
-     * @return void
      */
     public function saveShippingOption(): void
     {
@@ -289,8 +274,6 @@ class CheckoutPage extends Component
 
     /**
      * Return the available countries.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function getCountriesProperty(): Collection
     {
@@ -299,8 +282,6 @@ class CheckoutPage extends Component
 
     /**
      * Return available shipping options.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function getShippingOptionsProperty(): Collection
     {
@@ -311,9 +292,6 @@ class CheckoutPage extends Component
 
     /**
      * Return the address validation rules for a given type.
-     *
-     * @param  string  $type
-     * @return array
      */
     protected function getAddressValidation(string $type): array
     {

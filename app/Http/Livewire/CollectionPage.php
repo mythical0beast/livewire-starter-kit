@@ -15,8 +15,6 @@ class CollectionPage extends Component
     /**
      * {@inheritDoc}
      *
-     * @param  string  $slug
-     * @return void
      *
      * @throws \Http\Client\Exception\HttpException
      */
@@ -39,8 +37,6 @@ class CollectionPage extends Component
 
     /**
      * Computed property to return the collection.
-     *
-     * @return \Lunar\Models\Collection
      */
     public function getCollectionProperty(): Collection
     {

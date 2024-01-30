@@ -25,8 +25,6 @@ class SearchPage extends Component
 
     /**
      * Return the search results.
-     *
-     * @return \Illuminate\Pagination\LengthAwarePaginator
      */
     public function getResultsProperty(): LengthAwarePaginator
     {

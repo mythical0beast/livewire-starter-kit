@@ -12,8 +12,6 @@ class CustomerSeeder extends AbstractSeeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run(): void
     {

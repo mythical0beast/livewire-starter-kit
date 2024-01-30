@@ -16,8 +16,6 @@ class ShippingOptions extends Component
 
     /**
      * {@inheritDoc}
-     *
-     * @return void
      */
     public function mount(): void
     {
@@ -31,8 +29,6 @@ class ShippingOptions extends Component
 
     /**
      * Return available shipping options.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function getShippingOptionsProperty(): Collection
     {
@@ -53,8 +49,6 @@ class ShippingOptions extends Component
 
     /**
      * Save the shipping option.
-     *
-     * @return void
      */
     public function save(): void
     {
@@ -69,8 +63,6 @@ class ShippingOptions extends Component
 
     /**
      * Return whether we have a shipping address.
-     *
-     * @return void
      */
     public function getShippingAddressProperty(): void
     {

@@ -13,8 +13,6 @@ class HomeTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
     public function test_component_can_mount(): void
     {

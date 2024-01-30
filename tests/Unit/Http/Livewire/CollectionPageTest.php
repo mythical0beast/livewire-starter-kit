@@ -19,8 +19,6 @@ class CollectionPageTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
     public function test_component_can_mount(): void
     {
@@ -39,8 +37,6 @@ class CollectionPageTest extends TestCase
 
     /**
      * Test 404 when slug doesn't exist.
-     *
-     * @return void
      */
     public function test_404_if_not_found(): void
     {
@@ -59,8 +55,6 @@ class CollectionPageTest extends TestCase
 
     /**
      * Test collection can be loaded via slug.
-     *
-     * @return void
      */
     public function test_collection_is_rendered(): void
     {
@@ -80,8 +74,6 @@ class CollectionPageTest extends TestCase
 
     /**
      * Test products are loaded on the page.
-     *
-     * @return void
      */
     public function test_collection_renders_products(): void
     {

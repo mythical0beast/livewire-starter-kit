@@ -22,9 +22,6 @@ class ProductPage extends Component
 
     /**
      * {@inheritDoc}
-     *
-     * @param  string  $slug
-     * @return void
      */
     public function mount(string $slug): void
     {
@@ -50,8 +47,6 @@ class ProductPage extends Component
 
     /**
      * Computed property to get variant.
-     *
-     * @return \Lunar\Models\ProductVariant
      */
     public function getVariantProperty(): ProductVariant
     {
@@ -65,8 +60,6 @@ class ProductPage extends Component
 
     /**
      * Computed property to return all available option values.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function getProductOptionValuesProperty(): Collection
     {
@@ -75,8 +68,6 @@ class ProductPage extends Component
 
     /**
      * Computed propert to get available product options with values.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function getProductOptionsProperty(): Collection
     {
@@ -91,8 +82,6 @@ class ProductPage extends Component
 
     /**
      * Computed property to return product.
-     *
-     * @return \Lunar\Models\Product
      */
     public function getProductProperty(): Product
     {
@@ -101,8 +90,6 @@ class ProductPage extends Component
 
     /**
      * Return all images for the product.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function getImagesProperty(): Collection
     {
@@ -111,8 +98,6 @@ class ProductPage extends Component
 
     /**
      * Computed property to return current image.
-     *
-     * @return string
      */
     public function getImageProperty(): string
     {

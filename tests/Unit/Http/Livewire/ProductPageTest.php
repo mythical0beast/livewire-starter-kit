@@ -18,8 +18,6 @@ class ProductPageTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
     public function test_component_can_mount(): void
     {
@@ -49,8 +47,6 @@ class ProductPageTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
     public function test_correct_product_is_loaded(): void
     {
@@ -81,8 +77,6 @@ class ProductPageTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
     public function test_product_is_visible(): void
     {

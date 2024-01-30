@@ -18,8 +18,6 @@ class CheckoutSuccessPage extends Component
 
     /**
      * {@inheritDoc}
-     *
-     * @return void
      */
     public function mount(): void
     {

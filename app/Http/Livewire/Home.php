@@ -10,8 +10,6 @@ class Home extends Component
 {
     /**
      * Return the sale collection.
-     *
-     * @return void
      */
     public function getSaleCollectionProperty(): void
     {
@@ -20,8 +18,6 @@ class Home extends Component
 
     /**
      * Return all images in sale collection.
-     *
-     * @return void
      */
     public function getSaleCollectionImagesProperty(): void
     {
@@ -41,8 +37,6 @@ class Home extends Component
 
     /**
      * Return a random collection.
-     *
-     * @return void
      */
     public function getRandomCollectionProperty(): void
     {
