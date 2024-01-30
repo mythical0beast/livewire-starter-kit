@@ -9,8 +9,8 @@ use Lunar\Models\Collection;
 
 class CollectionPage extends Component
 {
-    use PerformsRedirects,
-        FetchesUrls;
+    use FetchesUrls,
+        PerformsRedirects;
 
     /**
      * {@inheritDoc}
