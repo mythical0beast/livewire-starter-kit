@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Components;
 
+use Illuminate\Support\Collection;
 use Livewire\Component;
 use Lunar\Facades\CartSession;
 use Lunar\Facades\ShippingManifest;
@@ -15,10 +16,8 @@ class ShippingOptions extends Component
 
     /**
      * {@inheritDoc}
-     *
-     * @return void
      */
-    public function mount()
+    public function mount(): void
     {
         if ($shippingOption = $this->shippingAddress?->shipping_option) {
             $option = $this->shippingOptions->first(function ($opt) use ($shippingOption) {
@@ -30,10 +29,8 @@ class ShippingOptions extends Component
 
     /**
      * Return available shipping options.
-     *
-     * @return \Illuminate\Support\Collection
      */
-    public function getShippingOptionsProperty()
+    public function getShippingOptionsProperty(): Collection
     {
         return ShippingManifest::getOptions(
             CartSession::current()
@@ -52,10 +49,8 @@ class ShippingOptions extends Component
 
     /**
      * Save the shipping option.
-     *
-     * @return void
      */
-    public function save()
+    public function save(): void
     {
         $this->validate();
 
@@ -68,10 +63,8 @@ class ShippingOptions extends Component
 
     /**
      * Return whether we have a shipping address.
-     *
-     * @return void
      */
-    public function getShippingAddressProperty()
+    public function getShippingAddressProperty(): void
     {
         return CartSession::getCart()->shippingAddress;
     }

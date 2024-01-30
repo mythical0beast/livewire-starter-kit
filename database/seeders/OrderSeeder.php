@@ -21,10 +21,8 @@ class OrderSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         DB::transaction(function () {
             $variants = ProductVariant::get();
@@ -71,8 +69,8 @@ class OrderSeeder extends Seeder
                                 identifier: 'VAT',
                                 description: 'VAT',
                                 percentage: 20,
-                            )
-                        ]))
+                            ),
+                        ])),
                     ]);
                 }
 
@@ -96,8 +94,8 @@ class OrderSeeder extends Seeder
                             identifier: 'VAT',
                             description: 'VAT',
                             percentage: 20,
-                        )
-                    ]))
+                        ),
+                    ])),
                 ];
 
                 if ($hasUser) {

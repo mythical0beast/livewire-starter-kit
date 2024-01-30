@@ -18,10 +18,8 @@ class ProductPageTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
-    public function test_component_can_mount()
+    public function test_component_can_mount(): void
     {
         Language::factory()->create([
             'default' => true,
@@ -49,10 +47,8 @@ class ProductPageTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
-    public function test_correct_product_is_loaded()
+    public function test_correct_product_is_loaded(): void
     {
         Language::factory()->create([
             'default' => true,
@@ -81,10 +77,8 @@ class ProductPageTest extends TestCase
 
     /**
      * A basic unit test example.
-     *
-     * @return void
      */
-    public function test_product_is_visible()
+    public function test_product_is_visible(): void
     {
         Language::factory()->create([
             'default' => true,

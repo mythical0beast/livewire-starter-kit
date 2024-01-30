@@ -9,18 +9,16 @@ use Lunar\Models\Collection;
 
 class CollectionPage extends Component
 {
-    use PerformsRedirects,
-        FetchesUrls;
+    use FetchesUrls,
+        PerformsRedirects;
 
     /**
      * {@inheritDoc}
      *
-     * @param  string  $slug
-     * @return void
      *
      * @throws \Http\Client\Exception\HttpException
      */
-    public function mount($slug)
+    public function mount(string $slug): void
     {
         $this->url = $this->fetchUrl(
             $slug,
@@ -39,10 +37,8 @@ class CollectionPage extends Component
 
     /**
      * Computed property to return the collection.
-     *
-     * @return \Lunar\Models\Collection
      */
-    public function getCollectionProperty()
+    public function getCollectionProperty(): Collection
     {
         return $this->url->element;
     }

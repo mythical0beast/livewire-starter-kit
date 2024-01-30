@@ -80,10 +80,8 @@ class CheckoutAddress extends Component
 
     /**
      * Save the cart address.
-     *
-     * @return void
      */
-    public function save()
+    public function save(): void
     {
         $validatedData = $this->validate();
 

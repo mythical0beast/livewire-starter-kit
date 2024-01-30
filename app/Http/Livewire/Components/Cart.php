@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Components;
 
+use Illuminate\Support\Collection;
 use Livewire\Component;
 use Lunar\Facades\CartSession;
+use Lunar\Managers\CartManager;
 
 class Cart extends Component
 {
@@ -38,30 +40,24 @@ class Cart extends Component
 
     /**
      * Get the current cart instance.
-     *
-     * @return \Lunar\Managers\CartManager
      */
-    public function getCartProperty()
+    public function getCartProperty(): CartManager
     {
         return CartSession::current();
     }
 
     /**
      * Return the cart lines from the cart.
-     *
-     * @return \Illuminate\Support\Collection
      */
-    public function getCartLinesProperty()
+    public function getCartLinesProperty(): Collection
     {
         return $this->cart->lines ?? collect();
     }
 
     /**
      * Update the cart lines.
-     *
-     * @return void
      */
-    public function updateLines()
+    public function updateLines(): void
     {
         $this->validate();
 
@@ -83,10 +79,8 @@ class Cart extends Component
      *
      * We want to map out our cart lines like this so we can
      * add some validation rules and make them editable.
-     *
-     * @return void
      */
-    public function mapLines()
+    public function mapLines(): void
     {
         $this->lines = $this->cartLines->map(function ($line) {
             return [

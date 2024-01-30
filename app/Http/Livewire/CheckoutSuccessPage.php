@@ -18,10 +18,8 @@ class CheckoutSuccessPage extends Component
 
     /**
      * {@inheritDoc}
-     *
-     * @return void
      */
-    public function mount()
+    public function mount(): void
     {
         $this->cart = CartSession::current();
         if (! $this->cart || ! $this->cart->completedOrder) {
