@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Components;
 
-use Lunar\Managers\CartManager;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 use Lunar\Facades\CartSession;
+use Lunar\Managers\CartManager;
 
 class Cart extends Component
 {

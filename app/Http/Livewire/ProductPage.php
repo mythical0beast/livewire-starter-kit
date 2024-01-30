@@ -2,12 +2,12 @@
 
 namespace App\Http\Livewire;
 
-use Lunar\Models\ProductVariant;
-use Illuminate\Support\Collection;
 use App\Traits\FetchesUrls;
+use Illuminate\Support\Collection;
 use Livewire\Component;
 use Livewire\ComponentConcerns\PerformsRedirects;
 use Lunar\Models\Product;
+use Lunar\Models\ProductVariant;
 
 class ProductPage extends Component
 {
