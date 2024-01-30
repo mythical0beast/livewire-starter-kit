@@ -10,20 +10,16 @@ class Home extends Component
 {
     /**
      * Return the sale collection.
-     *
-     * @return void
      */
-    public function getSaleCollectionProperty()
+    public function getSaleCollectionProperty(): void
     {
         return Url::whereElementType(Collection::class)->whereSlug('sale')->first()?->element ?? null;
     }
 
     /**
      * Return all images in sale collection.
-     *
-     * @return void
      */
-    public function getSaleCollectionImagesProperty()
+    public function getSaleCollectionImagesProperty(): void
     {
         if (! $this->getSaleCollectionProperty()) {
             return;
@@ -41,10 +37,8 @@ class Home extends Component
 
     /**
      * Return a random collection.
-     *
-     * @return void
      */
-    public function getRandomCollectionProperty()
+    public function getRandomCollectionProperty(): void
     {
         $collections = Url::whereElementType(Collection::class);
 
