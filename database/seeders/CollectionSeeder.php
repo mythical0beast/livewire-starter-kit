@@ -15,7 +15,7 @@ class CollectionSeeder extends AbstractSeeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $collections = $this->getSeedData('collections');
 

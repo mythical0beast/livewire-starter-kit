@@ -18,7 +18,7 @@ class NavigationTest extends TestCase
      *
      * @return void
      */
-    public function test_component_can_mount()
+    public function test_component_can_mount(): void
     {
         Livewire::test(Navigation::class)
             ->assertViewIs('livewire.components.navigation');
@@ -29,7 +29,7 @@ class NavigationTest extends TestCase
      *
      * @return void
      */
-    public function test_collections_are_visible()
+    public function test_collections_are_visible(): void
     {
         Language::factory()->create([
             'default' => true,

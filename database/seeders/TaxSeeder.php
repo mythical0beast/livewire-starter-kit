@@ -16,7 +16,7 @@ class TaxSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $taxClass = TaxClass::first();
 

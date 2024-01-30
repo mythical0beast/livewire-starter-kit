@@ -22,7 +22,7 @@ class CollectionPageTest extends TestCase
      *
      * @return void
      */
-    public function test_component_can_mount()
+    public function test_component_can_mount(): void
     {
         Language::factory()->create([
             'default' => true,
@@ -42,7 +42,7 @@ class CollectionPageTest extends TestCase
      *
      * @return void
      */
-    public function test_404_if_not_found()
+    public function test_404_if_not_found(): void
     {
         Language::factory()->create([
             'default' => true,
@@ -62,7 +62,7 @@ class CollectionPageTest extends TestCase
      *
      * @return void
      */
-    public function test_collection_is_rendered()
+    public function test_collection_is_rendered(): void
     {
         Language::factory()->create([
             'default' => true,
@@ -83,7 +83,7 @@ class CollectionPageTest extends TestCase
      *
      * @return void
      */
-    public function test_collection_renders_products()
+    public function test_collection_renders_products(): void
     {
         Language::factory()->create([
             'default' => true,

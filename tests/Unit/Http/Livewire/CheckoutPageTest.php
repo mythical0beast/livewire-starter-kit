@@ -25,7 +25,7 @@ class CheckoutPageTest extends TestCase
      *
      * @return void
      */
-    public function test_component_can_mount()
+    public function test_component_can_mount(): void
     {
         CartSession::shouldReceive('current')->andReturn(
             Cart::factory()->create()->calculate()
@@ -42,7 +42,7 @@ class CheckoutPageTest extends TestCase
      *
      * @return void
      */
-    public function test_checkout_step_is_correct_on_load()
+    public function test_checkout_step_is_correct_on_load(): void
     {
         CartSession::shouldReceive('current')->andReturn(
             Cart::factory()->create()->calculate()
@@ -58,7 +58,7 @@ class CheckoutPageTest extends TestCase
      *
      * @return void
      */
-    public function test_checkout_step_is_correct_with_shipping_on_load()
+    public function test_checkout_step_is_correct_with_shipping_on_load(): void
     {
         TaxClass::factory()->create([
             'default' => true,
@@ -86,7 +86,7 @@ class CheckoutPageTest extends TestCase
      *
      * @return void
      */
-    public function test_checkout_on_billing_if_we_have_shipping_option()
+    public function test_checkout_on_billing_if_we_have_shipping_option(): void
     {
         TaxClass::factory()->create([
             'default' => true,
@@ -119,7 +119,7 @@ class CheckoutPageTest extends TestCase
      *
      * @return void
      */
-    public function test_checkout_on_payment_if_we_have_billing_address()
+    public function test_checkout_on_payment_if_we_have_billing_address(): void
     {
         TaxClass::factory()->create([
             'default' => true,
@@ -159,7 +159,7 @@ class CheckoutPageTest extends TestCase
      *
      * @return void
      */
-    public function test_can_save_shipping_address()
+    public function test_can_save_shipping_address(): void
     {
         TaxClass::factory()->create([
             'default' => true,
@@ -231,7 +231,7 @@ class CheckoutPageTest extends TestCase
      *
      * @return void
      */
-    public function test_can_save_billing_address()
+    public function test_can_save_billing_address(): void
     {
         TaxClass::factory()->create([
             'default' => true,

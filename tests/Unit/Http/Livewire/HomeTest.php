@@ -16,7 +16,7 @@ class HomeTest extends TestCase
      *
      * @return void
      */
-    public function test_component_can_mount()
+    public function test_component_can_mount(): void
     {
         Livewire::test(Home::class)
             ->assertViewIs('livewire.home');

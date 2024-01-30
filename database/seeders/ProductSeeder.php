@@ -27,7 +27,7 @@ class ProductSeeder extends AbstractSeeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $products = $this->getSeedData('products');
 

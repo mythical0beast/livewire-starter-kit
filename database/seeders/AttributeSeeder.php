@@ -13,7 +13,7 @@ class AttributeSeeder extends AbstractSeeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $attributes = $this->getSeedData('attributes');
 

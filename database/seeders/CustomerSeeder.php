@@ -15,7 +15,7 @@ class CustomerSeeder extends AbstractSeeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         DB::transaction(function () {
             $faker = Factory::create();

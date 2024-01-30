@@ -14,7 +14,7 @@ class HomeTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_example(): void
     {
         $this->get('/')
             ->assertStatus(200)
