@@ -19,7 +19,7 @@ trait FetchesUrls
      * @param  array  $eagerLoad
      * @return \Lunar\Models\Url|null
      */
-    public function fetchUrl($slug, $type, $eagerLoad = [])
+    public function fetchUrl(string $slug, string $type, array $eagerLoad = []): ?Url
     {
         return Url::whereElementType($type)
             ->whereDefault(true)

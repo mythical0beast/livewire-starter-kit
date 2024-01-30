@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Components;
 
+use Lunar\Managers\CartManager;
+use Illuminate\Support\Collection;
 use Livewire\Component;
 use Lunar\Facades\CartSession;
 
@@ -41,7 +43,7 @@ class Cart extends Component
      *
      * @return \Lunar\Managers\CartManager
      */
-    public function getCartProperty()
+    public function getCartProperty(): CartManager
     {
         return CartSession::current();
     }
@@ -51,7 +53,7 @@ class Cart extends Component
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getCartLinesProperty()
+    public function getCartLinesProperty(): Collection
     {
         return $this->cart->lines ?? collect();
     }
@@ -61,7 +63,7 @@ class Cart extends Component
      *
      * @return void
      */
-    public function updateLines()
+    public function updateLines(): void
     {
         $this->validate();
 
@@ -86,7 +88,7 @@ class Cart extends Component
      *
      * @return void
      */
-    public function mapLines()
+    public function mapLines(): void
     {
         $this->lines = $this->cartLines->map(function ($line) {
             return [

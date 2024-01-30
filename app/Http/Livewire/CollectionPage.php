@@ -20,7 +20,7 @@ class CollectionPage extends Component
      *
      * @throws \Http\Client\Exception\HttpException
      */
-    public function mount($slug)
+    public function mount(string $slug): void
     {
         $this->url = $this->fetchUrl(
             $slug,
@@ -42,7 +42,7 @@ class CollectionPage extends Component
      *
      * @return \Lunar\Models\Collection
      */
-    public function getCollectionProperty()
+    public function getCollectionProperty(): Collection
     {
         return $this->url->element;
     }

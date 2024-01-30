@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire;
 
+use Lunar\Models\ProductVariant;
+use Illuminate\Support\Collection;
 use App\Traits\FetchesUrls;
 use Livewire\Component;
 use Livewire\ComponentConcerns\PerformsRedirects;
@@ -24,7 +26,7 @@ class ProductPage extends Component
      * @param  string  $slug
      * @return void
      */
-    public function mount($slug)
+    public function mount(string $slug): void
     {
         $this->url = $this->fetchUrl(
             $slug,
@@ -51,7 +53,7 @@ class ProductPage extends Component
      *
      * @return \Lunar\Models\ProductVariant
      */
-    public function getVariantProperty()
+    public function getVariantProperty(): ProductVariant
     {
         return $this->product->variants->first(function ($variant) {
             return ! $variant->values->pluck('id')
@@ -66,7 +68,7 @@ class ProductPage extends Component
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getProductOptionValuesProperty()
+    public function getProductOptionValuesProperty(): Collection
     {
         return $this->product->variants->pluck('values')->flatten();
     }
@@ -76,7 +78,7 @@ class ProductPage extends Component
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getProductOptionsProperty()
+    public function getProductOptionsProperty(): Collection
     {
         return $this->productOptionValues->unique('id')->groupBy('product_option_id')
             ->map(function ($values) {
@@ -92,7 +94,7 @@ class ProductPage extends Component
      *
      * @return \Lunar\Models\Product
      */
-    public function getProductProperty()
+    public function getProductProperty(): Product
     {
         return $this->url->element;
     }
@@ -102,7 +104,7 @@ class ProductPage extends Component
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getImagesProperty()
+    public function getImagesProperty(): Collection
     {
         return $this->product->media;
     }
@@ -112,7 +114,7 @@ class ProductPage extends Component
      *
      * @return string
      */
-    public function getImageProperty()
+    public function getImageProperty(): string
     {
         if (count($this->variant->images)) {
             return $this->variant->images->first();

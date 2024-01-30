@@ -83,7 +83,7 @@ class CheckoutAddress extends Component
      *
      * @return void
      */
-    public function save()
+    public function save(): void
     {
         $validatedData = $this->validate();
 

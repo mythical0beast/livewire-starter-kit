@@ -26,7 +26,7 @@ class Navigation extends Component
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function getCollectionsProperty()
+    public function getCollectionsProperty(): \Illuminate\Database\Eloquent\Collection
     {
         return Collection::with(['defaultUrl'])->get()->toTree();
     }

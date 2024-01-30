@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Collection;
 use Livewire\Component;
 use Livewire\ComponentConcerns\PerformsRedirects;
 use Lunar\Facades\CartSession;
@@ -101,7 +102,7 @@ class CheckoutPage extends Component
      *
      * @return void
      */
-    public function mount()
+    public function mount(): void
     {
         if (! $this->cart = CartSession::current()) {
             $this->redirect('/');
@@ -143,7 +144,7 @@ class CheckoutPage extends Component
      *
      * @return void
      */
-    public function triggerAddressRefresh()
+    public function triggerAddressRefresh(): void
     {
         $this->emit('refreshAddress');
     }
@@ -153,7 +154,7 @@ class CheckoutPage extends Component
      *
      * @return void
      */
-    public function determineCheckoutStep()
+    public function determineCheckoutStep(): void
     {
         $shippingAddress = $this->cart->shippingAddress;
         $billingAddress = $this->cart->billingAddress;
@@ -185,7 +186,7 @@ class CheckoutPage extends Component
      *
      * @return void
      */
-    public function refreshCart()
+    public function refreshCart(): void
     {
         $this->cart = CartSession::current();
     }
@@ -195,7 +196,7 @@ class CheckoutPage extends Component
      *
      * @return void
      */
-    public function getShippingOptionProperty()
+    public function getShippingOptionProperty(): void
     {
         $shippingAddress = $this->cart->shippingAddress;
 
@@ -218,7 +219,7 @@ class CheckoutPage extends Component
      * @param  string  $type
      * @return void
      */
-    public function saveAddress($type)
+    public function saveAddress(string $type): void
     {
         $validatedData = $this->validate(
             $this->getAddressValidation($type)
@@ -259,7 +260,7 @@ class CheckoutPage extends Component
      *
      * @return void
      */
-    public function saveShippingOption()
+    public function saveShippingOption(): void
     {
         $option = $this->shippingOptions->first(fn ($option) => $option->getIdentifier() == $this->chosenShipping);
 
@@ -291,7 +292,7 @@ class CheckoutPage extends Component
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getCountriesProperty()
+    public function getCountriesProperty(): Collection
     {
         return Country::whereIn('iso3', ['GBR', 'USA'])->get();
     }
@@ -301,7 +302,7 @@ class CheckoutPage extends Component
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getShippingOptionsProperty()
+    public function getShippingOptionsProperty(): Collection
     {
         return ShippingManifest::getOptions(
             $this->cart
@@ -314,7 +315,7 @@ class CheckoutPage extends Component
      * @param  string  $type
      * @return array
      */
-    protected function getAddressValidation($type)
+    protected function getAddressValidation(string $type): array
     {
         return [
             "{$type}.first_name" => 'required',
